@@ -26,7 +26,7 @@ PROC string_contains_space(input_string):
 
 ```python
 PROC print_number_many_times(n):
-    for i <- to n do:
+    for i <- 0 to n do:
         print n
 ```
 
