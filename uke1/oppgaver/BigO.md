@@ -26,7 +26,7 @@ PROC string_contains_space(input_string):
 
 ```python
 PROC print_number_many_times(n):
-    for ctr in range(0,n) do:
+    for i <- to n do:
         print n
 ```
 
@@ -34,9 +34,9 @@ PROC print_number_many_times(n):
 
 ```python
 PROC contains_duplicate(array):
-    for i in range(|array|) do:
-        for j in range(|array|) do:
-            if i != j and array[i] == array[j] then:
+    for i <- 0 to |array| do:
+        for j <- 0 to |array| do:
+            if i != j and array[i] equals array[j] then:
                 return True
     return False
 
@@ -46,8 +46,8 @@ PROC contains_duplicate(array):
 
 ```python
 PROC contains_duplicate_smarter(array):
-    for i in range(|array|) do:
-        for j in range(i+1, |array|) do:
+    for i <- 0 to |array| do:
+        for j <- i+1 to |array| do:
             if array[i] == array[j] then:
                 return True
     return False
